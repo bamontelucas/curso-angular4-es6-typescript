@@ -75,5 +75,12 @@ let carros: Array<Carro> = [
 ]
 
 let concessionaria = new Concessionaria('Rua Dormevil Forastieri, 2-54', carros)
+let cliente = new Pessoa('Lucas Corrêa', 'Corsa')
 
-console.log(concessionaria.mostrarListaDeCarros())
+concessionaria.mostrarListaDeCarros().forEach((carro: Carro) => {
+    if(carro.modelo === cliente.dizerCarroPreferido()) {
+        cliente.comprarCarro(carro)
+    }
+});
+
+console.log(cliente.dizerCarroQueTem())

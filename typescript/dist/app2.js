@@ -57,4 +57,10 @@ var carros = [
     carroC
 ];
 var concessionaria = new Concessionaria('Rua Dormevil Forastieri, 2-54', carros);
-console.log(concessionaria.mostrarListaDeCarros());
+var cliente = new Pessoa('Lucas Corrêa', 'Corsa');
+concessionaria.mostrarListaDeCarros().forEach(function (carro) {
+    if (carro.modelo === cliente.dizerCarroPreferido()) {
+        cliente.comprarCarro(carro);
+    }
+});
+console.log(cliente.dizerCarroQueTem());
