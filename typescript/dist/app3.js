@@ -2,8 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Carro_1 = require("./Carro");
 var Moto_1 = require("./Moto");
+var Concessionaria_1 = require("./Concessionaria");
 var c = new Carro_1.default('Corsa', 4);
 var m = new Moto_1.default('Biz');
 m.acelerar();
 c.acelerar();
-console.log(m, c);
+var concessionaria = new Concessionaria_1.default('', []);
+console.log(m);
+console.log(c);
+console.log(concessionaria.fornecerHorariosDeFuncionamento());

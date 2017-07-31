@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ConcessionariaDao_1 = require("./ConcessionariaDao");
+var Concessionaria_1 = require("./Concessionaria");
+var PessoaDao_1 = require("./PessoaDao");
+var Pessoa_1 = require("./Pessoa");
+var c_dao = new ConcessionariaDao_1.ConcessionariaDao();
+var concessionaria = new Concessionaria_1.default('Rua x', []);
+c_dao.inserir(concessionaria);
+var p_dao = new PessoaDao_1.PessoaDao();
+var pessoa = new Pessoa_1.default('Lucas', 'Corsa');
+p_dao.inserir(pessoa);
